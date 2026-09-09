@@ -139,15 +139,24 @@ body::before{
   min-height:76px;padding-block:.6rem}
 .header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
   background:var(--gold-light);opacity:0;transition:opacity .35s var(--ease)}
-.header.is-stuck{background:var(--paper)}
+.header::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;pointer-events:none;
+  transition:opacity .35s var(--ease);
+  background:linear-gradient(180deg,rgba(16,13,9,.55),rgba(16,13,9,0))}
+body[data-hero="photo"] .header:not(.is-stuck)::before{opacity:1}
+.header.is-stuck{background:rgba(247,241,233,.92);
+  -webkit-backdrop-filter:saturate(1.6) blur(14px);backdrop-filter:saturate(1.6) blur(14px)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .header.is-stuck{background:var(--paper)}
+}
 .header.is-stuck::after{opacity:1}
 .brand{display:block;position:relative;line-height:0}
 .brand img{width:auto;height:clamp(38px,5.4vw,48px)}
 .brand__light{position:absolute;inset:0;opacity:0;transition:opacity .3s var(--ease)}
 .brand__dark{opacity:1;transition:opacity .3s var(--ease)}
-/* Über dem Foto-Hero trägt der Header die helle Logovariante, ab 80px
-   Scroll wechselt er auf Papier und die dunkle. Ein cremefarbener Hero
-   ohne Foto braucht nur data-hero="light" am <body>. */
+/* Über dem Foto-Hero trägt der Header die helle Logovariante. Er wechselt
+   erst auf Papier, wenn der Hero durchgelaufen ist, damit nie ein heller
+   Balken quer über dem Foto steht. Ein cremefarbener Hero ohne Foto
+   braucht nur data-hero="light" am <body>. */
 body[data-hero="photo"] .header:not(.is-stuck) .brand__light{opacity:1}
 body[data-hero="photo"] .header:not(.is-stuck) .brand__dark{opacity:0}
 
@@ -807,19 +816,31 @@ dialog::backdrop{background:rgba(20,20,20,.55);backdrop-filter:blur(3px)}
 (function () {
   'use strict';
 
-  /* Header state */
+  /* Header: erst umschalten, wenn der Hero durch ist. Sonst steht der helle
+     Balken mitten auf dem Foto. */
   var header = document.getElementById('header');
+  var hero = document.querySelector('.hero');
+  var trigger = 80;
+  function measure() {
+    trigger = hero
+      ? Math.max(hero.offsetTop + hero.offsetHeight - header.offsetHeight, 0)
+      : 80;
+  }
   var ticking = false;
   function onScroll() {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
-      header.classList.toggle('is-stuck', window.scrollY > 80);
+      header.classList.toggle('is-stuck', window.scrollY >= trigger);
       ticking = false;
     });
   }
   addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', function () { measure(); onScroll(); }, { passive: true });
+  addEventListener('orientationchange', function () { measure(); onScroll(); });
+  measure();
   onScroll();
+  addEventListener('load', function () { measure(); onScroll(); });
 
   /* Fade-up on scroll */
   var reduce = matchMedia('(prefers-reduced-motion: reduce)');
