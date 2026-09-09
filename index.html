@@ -140,6 +140,7 @@ body::before{
 .header{position:fixed;inset:0 0 auto;z-index:800;
   padding-top:env(safe-area-inset-top,0px);
   transition:background-color .35s var(--ease),box-shadow .35s var(--ease)}
+body[data-hero="photo"] .header:not(.is-stuck){box-shadow:0 -160px 0 160px rgba(16,13,9,.55)}
 .header__in{display:flex;align-items:center;justify-content:space-between;gap:1rem;
   min-height:76px;padding-block:.6rem}
 .header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
@@ -149,9 +150,10 @@ body::before{
   background:linear-gradient(180deg,rgba(16,13,9,.55),rgba(16,13,9,0))}
 body[data-hero="photo"] .header:not(.is-stuck)::before{opacity:1}
 .header.is-stuck{background:rgba(247,241,233,.92);
+  box-shadow:0 -160px 0 160px var(--paper);
   -webkit-backdrop-filter:saturate(1.6) blur(14px);backdrop-filter:saturate(1.6) blur(14px)}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .header.is-stuck{background:var(--paper)}
+  .header.is-stuck{background:var(--paper);box-shadow:0 -160px 0 160px var(--paper)}
 }
 .header.is-stuck::after{opacity:1}
 .brand{display:block;position:relative;line-height:0}
