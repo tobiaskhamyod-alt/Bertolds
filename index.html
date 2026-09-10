@@ -293,6 +293,7 @@ button{font:inherit;color:inherit;background:none;border:0}
   border:1px solid var(--line);border-radius:var(--r-pill);
   font-family:var(--display);font-weight:600;font-stretch:108%;font-size:.78rem;
   letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.status[hidden]{display:none}
 .status__dot{width:8px;height:8px;border-radius:50%;background:var(--ink-60);flex:none}
 .status[data-state="open"] .status__dot{background:#2F6B46}
 .status[data-state="closed"] .status__dot{background:#A2563F}
@@ -427,24 +428,25 @@ button{font:inherit;color:inherit;background:none;border:0}
 .imp__close{margin-top:2rem}
 
 /* ---------- Bewegung -------------------------------------------- */
-.rise{opacity:0;transform:translateY(18px)}
+.js .rise{opacity:0;transform:translateY(18px)}
 .rise.is-in{opacity:1;transform:none;
   transition:opacity .7s var(--ease),transform .7s var(--ease);
   transition-delay:calc(var(--i,0) * 90ms)}
-.hero__copy > *{opacity:0;transform:translateY(14px);
+.js .hero__copy > *{opacity:0;transform:translateY(14px);
   animation:heroIn .8s var(--ease) forwards;animation-delay:calc(.15s + var(--i,0) * .09s)}
 @keyframes heroIn{to{opacity:1;transform:none}}
-.hero__media img{animation:heroZoom 1.6s var(--ease) both}
+.js .hero__media img{animation:heroZoom 1.6s var(--ease) both}
 @keyframes heroZoom{from{transform:scale(1.06)}to{transform:scale(1)}}
 @media (prefers-reduced-motion: reduce){
-  .rise,.rise.is-in{opacity:1;transform:none;transition:none}
-  .hero__copy > *{opacity:1;transform:none;animation:none}
-  .hero__media img{animation:none}
+  .js .rise,.rise.is-in{opacity:1;transform:none;transition:none}
+  .js .hero__copy > *{opacity:1;transform:none;animation:none}
+  .js .hero__media img{animation:none}
   .progress{display:none}
   .callbar{transition:none}
   *{scroll-behavior:auto !important}
 }
 </style>
+<script>document.documentElement.className+=' js'</script>
 </head>
 <body id="top">
 
