@@ -3,31 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bertolds Cafébar Freiburg — Café am Tag, Bar am Abend</title>
-<meta name="description" content="Bertolds Cafébar in der Bertoldstraße 48, Freiburg. Tagsüber Kaffee, Matcha und Kuchen. Ab 17 Uhr Aperitivo-Time mit Aperitifs und Cocktails.">
-<meta name="theme-color" content="#F7F1E9">
+<title>Bertolds Cafébar Freiburg | Café am Tag, Bar am Abend</title>
+<meta name="description" content="Bertolds Cafébar in der Bertoldstraße 48, Freiburg. Frühstück, Kaffee und Matcha ab 8 Uhr. Ab 17 Uhr Aperitivo, Cocktails und Espresso Martini.">
+<meta name="theme-color" content="#FBF8F3">
 <link rel="canonical" href="https://www.bertolds.de/">
 
 <meta property="og:type" content="restaurant.bar">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="Bertolds Cafébar">
-<meta property="og:title" content="Bertolds Cafébar Freiburg — Café am Tag, Bar am Abend">
-<meta property="og:description" content="Bertoldstraße 48, Freiburg. Tagsüber Kaffee, Matcha und Kuchen. Ab 17 Uhr Aperitivo-Time.">
+<meta property="og:title" content="Bertolds Cafébar Freiburg | Café am Tag, Bar am Abend">
+<meta property="og:description" content="Bertoldstraße 48, Freiburg. Frühstück und Kaffee ab 8 Uhr. Ab 17 Uhr Aperitivo.">
 <meta property="og:url" content="https://www.bertolds.de/">
 <meta property="og:image" content="assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Die beleuchtete Barwand im Bertolds mit goldenen Regalen und dem Schriftzug BERTOLDS">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bertolds Cafébar Freiburg — Café am Tag, Bar am Abend">
-<meta name="twitter:description" content="Bertoldstraße 48, Freiburg. Tagsüber Kaffee, Matcha und Kuchen. Ab 17 Uhr Aperitivo-Time.">
+<meta name="twitter:title" content="Bertolds Cafébar Freiburg | Café am Tag, Bar am Abend">
+<meta name="twitter:description" content="Bertoldstraße 48, Freiburg. Frühstück und Kaffee ab 8 Uhr. Ab 17 Uhr Aperitivo.">
 <meta name="twitter:image" content="assets/img/og.jpg">
 
 <link rel="icon" href="assets/logo/favicon.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
 
-<link rel="preload" href="assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/karla-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/hero-hoch.webp" media="(max-width: 719px)">
+<link rel="preload" as="image" href="assets/img/hero.webp" media="(min-width: 720px)">
 
 <script type="application/ld+json">
 {
@@ -38,7 +40,7 @@
   "image": "https://www.bertolds.de/assets/img/og.jpg",
   "telephone": "+4976138493619",
   "email": "info@bertolds.de",
-  "servesCuisine": ["Kaffee", "Kuchen", "Cocktails"],
+  "servesCuisine": ["Kaffee", "Frühstück", "Kuchen", "Cocktails"],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Bertoldstraße 48",
@@ -57,804 +59,655 @@
 </script>
 
 <style>
-/* ── Fonts ──────────────────────────────────────────────────────────── */
-@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 700;font-display:swap;
-  src:url(assets/fonts/cormorant-garamond-latin.woff2) format('woff2');
+/* ============================================================
+   Bertolds Cafébar - Demo
+   Typo:  Archivo (variabel, Breite 75-125) fuer Display + Labels
+          Karla  (variabel) fuer Fliesstext
+   Farbe: Gold #B48515 exakt aus dem Logo, Petrol #285064 aus den
+          Samtbaenken, warmes Papier als Grundflaeche.
+   ============================================================ */
+
+@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:75% 125%;font-display:swap;
+  src:url(assets/fonts/archivo-var-latin.woff2) format('woff2');
   unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 700;font-display:swap;
-  src:url(assets/fonts/cormorant-garamond-latin-ext.woff2) format('woff2');
+@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:75% 125%;font-display:swap;
+  src:url(assets/fonts/archivo-var-latin-ext.woff2) format('woff2');
   unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Jost';font-style:normal;font-weight:100 900;font-display:swap;
-  src:url(assets/fonts/jost-latin.woff2) format('woff2');
+@font-face{font-family:'Karla';font-style:normal;font-weight:300 700;font-display:swap;
+  src:url(assets/fonts/karla-var-latin.woff2) format('woff2');
   unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Jost';font-style:normal;font-weight:100 900;font-display:swap;
-  src:url(assets/fonts/jost-latin-ext.woff2) format('woff2');
-  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Parisienne';font-style:normal;font-weight:400;font-display:swap;
-  src:url(assets/fonts/parisienne-400-latin.woff2) format('woff2');
-  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Parisienne';font-style:normal;font-weight:400;font-display:swap;
-  src:url(assets/fonts/parisienne-400-latin-ext.woff2) format('woff2');
+@font-face{font-family:'Karla';font-style:normal;font-weight:300 700;font-display:swap;
+  src:url(assets/fonts/karla-var-latin-ext.woff2) format('woff2');
   unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 
-/* ── Tokens ─────────────────────────────────────────────────────────── */
 :root{
-  --paper:#F7F1E9; --paper-deep:#EFE6DA; --card:#FCF9F5;
-  --ink:#141414; --ink-soft:#4A443C; --muted:#6E655A;
-  --gold:#C3922E; --gold-light:#DCC08A; --gold-deep:#7E5C17;
-  --gold-script:#9E7422; /* nur Schreibschrift, ab 24px */
-  --kd-navy:#0f1628; --kd-gold:#C9A84C;
-  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
-  --script:'Parisienne','Segoe Script',cursive;
-  --ui:'Jost','Helvetica Neue',Arial,sans-serif;
+  /* Grundflaeche: warm, hell */
+  --paper:#FBF8F3;
+  --oat:#EFE7DA;
+  /* Tinte und Dunkelflaechen: Petrol aus den Samtbaenken */
+  --ink:#12262F;
+  --ink-60:#4B6470;
+  --petrol:#285064;
+  --night:#0E2027;
+  --night-2:#16333F;
+  --night-text:#F1EBE1;
+  --night-text-60:#B4C2C7;
+  /* Akzent: Gold, exakt aus assets/logo/original_logo.png */
+  --gold:#B48515;
+  --gold-ink:#7A5A0E;      /* Gold als Textfarbe auf hell, 5.9:1 */
+  --gold-light:#D9AE3C;    /* Gold auf dunkel */
+  --line:rgba(180,133,21,.32);
+  --line-night:rgba(217,174,60,.34);
+
+  --display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --body:'Karla','Helvetica Neue',Arial,sans-serif;
+
+  /* Radien: Hochformat bekommt den Bogen, Flaechen bleiben kantig,
+     interaktive Elemente sind Pillen. */
+  --arch:9rem;
+  --r-flat:3px;
+  --r-pill:999px;
+
+  --gap:clamp(1rem,4vw,2rem);
+  --pad:clamp(1.15rem,5vw,3rem);
+  --shell:1240px;
+  --rhythm:clamp(4.5rem,12vw,9rem);
   --ease:cubic-bezier(.22,.61,.36,1);
-  --pad:clamp(1.25rem,5vw,2rem);
-  --shell:1200px;
 }
 
-/* ── Reset ──────────────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink-soft);
-  font:400 clamp(1.0625rem,.4vw + 1rem,1.125rem)/1.7 var(--ui);
-  overflow-x:hidden;-webkit-font-smoothing:antialiased}
-img,svg{display:block;max-width:100%}
-img{height:auto}
-a{color:inherit}
-h1,h2,h3,p,figure,ul,dl,dd{margin:0}
-ul{padding:0;list-style:none}
-button{font:inherit;color:inherit}
-
-/* Paper grain over everything */
-body::before{
-  content:"";position:fixed;inset:0;z-index:900;pointer-events:none;opacity:.035;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)'/%3E%3C/svg%3E");
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--body);font-weight:400;
+  font-size:clamp(1.0625rem,.35vw + 1rem,1.125rem);line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,figure,dl,dd,dt,ul,li{margin:0}
+ul{padding:0;list-style:none}
+button{font:inherit;color:inherit;background:none;border:0}
+:focus-visible{outline:3px solid var(--gold-ink);outline-offset:3px}
+.night :focus-visible,.footer__credit:focus-visible{outline-color:var(--gold-light)}
 
-:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px;border-radius:3px}
-
-.skip{position:absolute;left:-9999px;top:0;z-index:1000;background:var(--card);color:var(--ink);
-  padding:.75rem 1.25rem;border:1px solid var(--gold);border-radius:0 0 10px 0}
+.shell{width:100%;max-width:var(--shell);margin-inline:auto;padding-inline:var(--pad)}
+.skip{position:absolute;left:-9999px;top:0;z-index:80;background:var(--ink);color:var(--paper);
+  padding:.8rem 1.2rem;font-family:var(--display);font-size:.85rem}
 .skip:focus{left:0}
 
-.shell{width:100%;max-width:var(--shell);margin-inline:auto;
-  padding-left:max(var(--pad),env(safe-area-inset-left,0px));
-  padding-right:max(var(--pad),env(safe-area-inset-right,0px))}
-.section{padding-block:clamp(4rem,11vw,7.5rem);position:relative;scroll-margin-top:80px}
-.section--deep{background:var(--paper-deep)}
-.section--framed{overflow:hidden}
-
-/* ── Type ───────────────────────────────────────────────────────────── */
-.kicker{font-family:var(--script);font-weight:400;color:var(--gold-script);
-  font-size:clamp(1.5rem,4.2vw,2.1rem);line-height:1;margin-bottom:.35rem}
-.h2{font-family:var(--serif);font-weight:400;color:var(--ink);text-transform:uppercase;
-  letter-spacing:.12em;line-height:1.1;font-size:clamp(1.9rem,5.4vw,3.2rem);margin:0}
-.lead{max-width:62ch}
-.head{text-align:center;margin-bottom:clamp(2.5rem,6vw,3.75rem)}
-.head .lead{margin-inline:auto;margin-top:1.25rem;color:var(--ink-soft)}
-
-.divider{display:block;margin:1.25rem auto 0;width:min(230px,60%);height:12px;color:var(--gold)}
-.divider--left{margin-inline:0}
-
-/* ── Header ─────────────────────────────────────────────────────────── */
-.header{position:fixed;inset:0 0 auto;z-index:800;
-  padding-top:env(safe-area-inset-top,0px);
-  transition:background-color .35s var(--ease),box-shadow .35s var(--ease)}
-body[data-hero="photo"] .header:not(.is-stuck){box-shadow:0 -160px 0 160px rgba(16,13,9,.55)}
-.header__in{display:flex;align-items:center;justify-content:space-between;gap:1rem;
-  min-height:76px;padding-block:.6rem}
-.header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
-  background:var(--gold-light);opacity:0;transition:opacity .35s var(--ease)}
-.header::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;pointer-events:none;
-  transition:opacity .35s var(--ease);
-  background:linear-gradient(180deg,rgba(16,13,9,.55),rgba(16,13,9,0))}
-body[data-hero="photo"] .header:not(.is-stuck)::before{opacity:1}
-.header.is-stuck{background:rgba(247,241,233,.92);
-  box-shadow:0 -160px 0 160px var(--paper);
-  -webkit-backdrop-filter:saturate(1.6) blur(14px);backdrop-filter:saturate(1.6) blur(14px)}
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .header.is-stuck{background:var(--paper);box-shadow:0 -160px 0 160px var(--paper)}
+/* ---------- Typo-Skala ---------------------------------------- */
+.display{
+  font-family:var(--display);font-weight:600;font-stretch:112%;
+  line-height:1.02;letter-spacing:-.005em;color:var(--ink);
+  text-wrap:balance;
 }
-.header.is-stuck::after{opacity:1}
-.brand{display:block;position:relative;line-height:0}
-.brand img{width:auto;height:clamp(38px,5.4vw,48px)}
-.brand__light{position:absolute;inset:0;opacity:0;transition:opacity .3s var(--ease)}
-.brand__dark{opacity:1;transition:opacity .3s var(--ease)}
-/* Über dem Foto-Hero trägt der Header die helle Logovariante. Er wechselt
-   erst auf Papier, wenn der Hero durchgelaufen ist, damit nie ein heller
-   Balken quer über dem Foto steht. Ein cremefarbener Hero ohne Foto
-   braucht nur data-hero="light" am <body>. */
-body[data-hero="photo"] .header:not(.is-stuck) .brand__light{opacity:1}
-body[data-hero="photo"] .header:not(.is-stuck) .brand__dark{opacity:0}
-
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
-  font-family:var(--ui);font-weight:500;font-size:.8125rem;letter-spacing:.16em;text-transform:uppercase;
-  text-decoration:none;padding:.85rem 1.6rem;border-radius:999px;border:1px solid var(--gold);
-  color:var(--gold-deep);background:transparent;
-  transition:background-color .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease)}
-.btn:hover{background:var(--gold-deep);color:#fff;border-color:var(--gold-deep)}
-.btn--solid{background:var(--ink);border-color:var(--ink);color:var(--paper)}
-.btn--solid:hover{background:var(--gold-deep);border-color:var(--gold-deep);color:#fff}
-.btn--icon{padding:.7rem;border-radius:50%;width:44px;height:44px}
-.header .btn--icon{display:none}
-@media (max-width:639px){
-  .header .btn--text{display:none}
-  .header .btn--icon{display:inline-flex}
+.display--xl{font-size:clamp(2.15rem,7.2vw,5.4rem)}
+@media (max-width:479px){.display--xl{font-stretch:104%}}
+.display--l{font-size:clamp(2rem,5.4vw,2.95rem)}
+.display--m{font-size:clamp(1.6rem,4.2vw,2.5rem)}
+.lead{font-size:clamp(1.125rem,.6vw + 1rem,1.35rem);line-height:1.55;max-width:34ch}
+.prose{max-width:56ch}
+.prose p + p{margin-top:1.05rem}
+.marker{
+  font-family:var(--display);font-weight:500;font-stretch:118%;
+  font-size:clamp(2.2rem,4.6vw,3.1rem);line-height:1;color:var(--gold);
+  font-variant-numeric:tabular-nums;
 }
-
-/* ── Hero ───────────────────────────────────────────────────────────── */
-.hero{position:relative;isolation:isolate;display:grid;place-items:center;text-align:center;
-  min-height:min(100vh,860px);min-height:min(100svh,860px);padding-block:clamp(7rem,18vw,9rem) clamp(4.5rem,10vw,6rem);overflow:hidden}
-.hero picture{display:contents}
-.hero__bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(180deg,rgba(247,241,233,.72) 0%,rgba(247,241,233,.35) 42%,rgba(239,230,218,.8) 100%)}
-body[data-hero="photo"] .hero::after{
-  background:linear-gradient(180deg,rgba(16,13,9,.68) 0%,rgba(16,13,9,.5) 40%,rgba(16,13,9,.78) 100%)}
-body[data-hero="photo"] .hero{color:#fff}
-body[data-hero="photo"] .hero .hero__title,
-body[data-hero="photo"] .hero .hero__meta{color:#fff}
-body[data-hero="photo"] .hero .kicker{color:var(--gold-light)}
-body[data-hero="photo"] .hero .btn{border-color:var(--gold-light);color:var(--gold-light)}
-body[data-hero="photo"] .hero .btn:hover{background:var(--gold-light);border-color:var(--gold-light);color:#141414}
-body[data-hero="photo"] .hero .btn--solid{background:var(--paper);border-color:var(--paper);color:var(--ink)}
-body[data-hero="photo"] .hero .btn--solid:hover{background:#fff;border-color:#fff;color:var(--ink)}
-body[data-hero="photo"] .hero__scroll{color:rgba(255,255,255,.82)}
-body[data-hero="photo"] .hero__scroll svg{color:var(--gold-light)}
-body[data-hero="photo"] .header:not(.is-stuck) .btn{border-color:var(--gold-light);color:var(--gold-light)}
-body[data-hero="photo"] .header:not(.is-stuck) .btn:hover{background:var(--gold-light);border-color:var(--gold-light);color:#141414}
-
-.hero .kicker{margin-bottom:.5rem}
-.hero__title{font-family:var(--serif);font-weight:300;color:var(--ink);
-  font-size:clamp(2.6rem,8vw,5.5rem);line-height:1.02;letter-spacing:.01em;
-  max-width:16ch;margin-inline:auto;text-wrap:balance}
-.hero__meta{margin-top:1.5rem;font-size:.8125rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-.hero__cta{display:flex;flex-wrap:wrap;gap:.85rem;justify-content:center;margin-top:2.25rem}
-.hero__scroll{position:absolute;left:50%;translate:-50% 0;
-  bottom:calc(1.75rem + env(safe-area-inset-bottom,0px));
-  display:grid;justify-items:center;gap:.5rem;color:var(--muted);
-  font-size:.6875rem;letter-spacing:.24em;text-transform:uppercase;text-decoration:none}
-.hero__scroll svg{color:var(--gold);animation:nudge 2.6s var(--ease) infinite}
-@media (max-width:639px){
-  .hero__scroll{bottom:calc(4.75rem + env(safe-area-inset-bottom,0px))}
-  .hero{padding-bottom:9rem}
-  body[data-hero="photo"] .hero{align-items:end;
-    padding-bottom:calc(4rem + env(safe-area-inset-bottom,0px))}
-  body[data-hero="photo"] .hero__scroll{display:none}
+.eyebrow{
+  font-family:var(--display);font-weight:600;font-stretch:118%;
+  font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-ink);
 }
-@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+.night .eyebrow{color:var(--gold-light)}
 
-/* Leaf ornaments framing sections */
-.leaf{position:absolute;top:0;width:min(200px,17vw);color:var(--gold-light);opacity:.5;
-  pointer-events:none;z-index:0}
-.leaf--l{left:-1rem}
-.leaf--r{right:-1rem;scale:-1 1}
-@media (max-width:899px){.leaf{width:96px;opacity:.38}}
-@media (max-width:639px){.leaf{display:none}}
+/* ---------- Buttons ------------------------------------------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  min-height:48px;padding:.7rem 1.5rem;border-radius:var(--r-pill);
+  font-family:var(--display);font-weight:600;font-stretch:105%;font-size:.9rem;
+  letter-spacing:.02em;text-decoration:none;cursor:pointer;
+  border:1.5px solid transparent;
+  transition:background-color .22s var(--ease),color .22s var(--ease),border-color .22s var(--ease),transform .12s var(--ease);
+}
+.btn:active{transform:translateY(1px)}
+.btn--solid{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn--solid:hover{background:var(--petrol);border-color:var(--petrol)}
+.btn--ghost{color:var(--ink);border-color:var(--ink)}
+.btn--ghost:hover{background:var(--ink);color:var(--paper)}
+.btn--onphoto{background:#FBF8F3;color:#12262F;border-color:#FBF8F3}
+.btn--onphoto:hover{background:var(--gold);border-color:var(--gold);color:#12262F}
+.btn--onphoto-ghost{color:#FBF8F3;border-color:rgba(251,248,243,.75);background:rgba(14,32,39,.35)}
+.btn--onphoto-ghost:hover{background:#FBF8F3;color:#12262F;border-color:#FBF8F3}
 
-/* ── About ──────────────────────────────────────────────────────────── */
-.about{display:grid;gap:clamp(2.25rem,6vw,4rem);align-items:center}
-@media (min-width:900px){.about{grid-template-columns:1fr 1fr}}
-.about__text p + p{margin-top:1.1rem}
-.about__figure{position:relative;border-radius:20px;overflow:hidden;
-  box-shadow:0 14px 44px rgba(90,70,40,.10)}
-.about__figure img{width:100%;height:auto;object-fit:cover;aspect-ratio:4/5}
-@media (max-width:899px){.about__figure img{aspect-ratio:4/3}}
-.sig{font-family:var(--script);color:var(--gold-script);font-size:1.5rem;line-height:1.2;margin-top:1.5rem}
+/* ---------- Fortschrittslinie (nur wo unterstuetzt) ------------ */
+.progress{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--gold);z-index:70;
+  transform-origin:0 50%;transform:scaleX(0);opacity:0}
+@supports (animation-timeline: scroll()){
+  @media (prefers-reduced-motion: no-preference){
+    .progress{opacity:1;animation:grow linear both;animation-timeline:scroll(root block)}
+  }
+}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 
-/* ── Cards grid ─────────────────────────────────────────────────────── */
-.duo{display:grid;gap:1.25rem}
-@media (min-width:900px){.duo{grid-template-columns:1fr 1fr;gap:1.75rem}}
-.panel{background:var(--card);border:1px solid rgba(195,146,46,.18);border-radius:18px;
-  box-shadow:0 8px 30px rgba(90,70,40,.06);overflow:hidden;display:flex;flex-direction:column}
-.panel__img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block}
-.panel__body{padding:clamp(1.75rem,4.5vw,2.5rem);display:flex;flex-direction:column;flex:1}
-.panel .tags{margin-top:auto}
-.panel__ico{color:var(--gold);margin-bottom:1rem}
-.panel h3{font-family:var(--serif);font-weight:400;color:var(--ink);text-transform:uppercase;
-  letter-spacing:.12em;font-size:clamp(1.35rem,3.4vw,1.75rem);line-height:1.15}
-.panel__when{font-family:var(--ui);font-weight:500;font-size:.75rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--gold-deep);margin-top:.6rem}
-.panel p{margin-top:1rem}
-.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;padding-top:1.5rem;
-  border-top:1px solid rgba(195,146,46,.22)}
-.tags li{font-size:.8125rem;letter-spacing:.05em;color:var(--ink-soft);
-  border:1px solid rgba(195,146,46,.35);border-radius:999px;padding:.35rem .85rem;background:rgba(247,241,233,.6)}
-
-/* ── Opening hours ──────────────────────────────────────────────────── */
-.pill{display:inline-flex;align-items:center;gap:.6rem;font-size:.75rem;font-weight:500;
-  letter-spacing:.18em;text-transform:uppercase;padding:.5rem 1.1rem;border-radius:999px;
-  border:1px solid rgba(195,146,46,.4);background:var(--card);color:var(--ink-soft);margin-bottom:1.5rem}
-.pill__dot{width:8px;height:8px;border-radius:50%;background:var(--muted);flex:none}
-.pill[data-state="open"] .pill__dot{background:#3F7A44}
-.pill[data-state="closed"] .pill__dot{background:#9A5B4A}
-
-.hours{display:grid;gap:1rem;max-width:820px;margin-inline:auto}
-@media (min-width:640px){.hours{grid-template-columns:1fr 1fr}}
-.hour{display:flex;align-items:center;gap:clamp(.9rem,2.5vw,1.25rem);
-  background:var(--card);border:1px solid rgba(195,146,46,.18);border-radius:18px;
-  box-shadow:0 8px 30px rgba(90,70,40,.06);padding:1.1rem clamp(1.1rem,3vw,1.5rem)}
-.hour__ico{color:var(--gold);flex:none}
-.hour__label{font-family:var(--ui);font-weight:500;font-size:.8125rem;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--ink);white-space:nowrap}
-.hour__rule{width:1px;align-self:stretch;background:rgba(195,146,46,.4);flex:none;margin-inline:auto 0}
-.hour__val{font-family:var(--serif);font-weight:400;font-size:1.3rem;letter-spacing:.06em;
-  color:var(--ink);white-space:nowrap;text-align:right;min-width:8.5ch}
-.hour--closed .hour__val{font-size:1rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.hours__outro{text-align:center;margin-top:clamp(2.25rem,6vw,3rem)}
-.hours__outro span{font-family:var(--script);color:var(--gold-script);font-size:clamp(1.5rem,4.4vw,2.15rem);line-height:1.2}
-.hours__outro svg{color:var(--gold);margin:.75rem auto 0}
-
-/* ── Gallery ────────────────────────────────────────────────────────── */
-.bento{display:grid;gap:0;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(150px,15.5vw,235px);
-  border-radius:20px;overflow:hidden;box-shadow:0 14px 44px rgba(90,70,40,.10)}
-.bento figure{margin:0;overflow:hidden;position:relative;background:var(--paper-deep);min-height:0;
-  box-shadow:inset 0 0 0 1px rgba(195,146,46,.3)}
-.bento img{width:100%;height:100%;object-fit:cover;transition:scale .7s var(--ease)}
-.bento figure:hover img{scale:1.06}
-.bento figure:nth-child(1){grid-column:span 2;grid-row:span 2}
-.bento figure:nth-child(2){grid-column:span 1;grid-row:span 2}
-.bento figure:nth-child(3){grid-column:span 1;grid-row:span 2}
-.bento figure:nth-child(4){grid-column:span 2}
-.bento figure:nth-child(5){grid-column:span 1}
-.bento figure:nth-child(6){grid-column:span 1}
-@media (max-width:899px){
-  .bento{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.75rem;
-    border-radius:0;box-shadow:none;padding-inline:var(--pad);
-    margin-inline:calc(var(--pad) * -1);-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .bento::-webkit-scrollbar{display:none}
-  .bento figure{flex:0 0 78%;scroll-snap-align:center;aspect-ratio:4/3;border-radius:16px;
-    box-shadow:0 10px 30px rgba(90,70,40,.10)}
+/* ---------- Kopfzeile (nicht sticky) --------------------------- */
+.head{position:absolute;top:0;left:0;right:0;z-index:40}
+.head__in{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  min-height:64px;padding-block:.6rem}
+.head__logo img{height:48px;width:auto}
+.nav{display:none}
+@media (min-width:760px){
+  .nav{display:flex;align-items:center;gap:clamp(1.1rem,2.4vw,1.85rem)}
+  .nav a{
+    font-family:var(--display);font-weight:500;font-stretch:108%;font-size:.82rem;
+    letter-spacing:.12em;text-transform:uppercase;color:#FBF8F3;text-decoration:none;
+    display:inline-flex;align-items:center;min-height:44px;
+    border-bottom:1px solid transparent;transition:border-color .2s var(--ease)
+  }
+  .nav a:hover{border-bottom-color:var(--gold-light)}
+  .head__logo img{height:56px}
 }
 
-/* ── Anfahrt ────────────────────────────────────────────────────────── */
-.way{display:grid;gap:clamp(2rem,5vw,3rem);align-items:center}
-@media (min-width:900px){.way{grid-template-columns:.85fr 1.15fr}}
-.map{background:var(--card);border:1px solid rgba(195,146,46,.18);border-radius:20px;
-  box-shadow:0 8px 30px rgba(90,70,40,.06);padding:clamp(1rem,3vw,1.5rem);
-  display:block;text-decoration:none;transition:box-shadow .35s var(--ease)}
-.map:hover{box-shadow:0 16px 44px rgba(90,70,40,.13)}
-.map > svg{width:100%;height:auto}
-.map__note{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;
-  margin-top:.9rem;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep)}
-.facts{display:grid;gap:1rem;margin-top:2rem}
-.fact{display:flex;gap:1rem;align-items:flex-start}
-.fact svg{color:var(--gold);flex:none;margin-top:.2rem}
-.fact strong{display:block;font-family:var(--ui);font-weight:500;font-size:.75rem;
-  letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
-.fact span{color:var(--ink-soft)}
+/* ---------- Hero ----------------------------------------------- */
+.hero{position:relative;isolation:isolate;min-height:100svh;display:grid;align-items:end;
+  padding-block:8rem 2.5rem;overflow:hidden}
+.hero__media{position:absolute;inset:0;z-index:-2}
+.hero__media img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
+@media (min-width:720px){.hero__media img{object-position:center 45%}}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(178deg,rgba(9,20,25,.72) 0%,rgba(9,20,25,.18) 34%,rgba(9,20,25,.55) 72%,rgba(9,20,25,.9) 100%);
+}
+.hero__copy{position:relative;color:#FBF8F3}
+.hero__copy .display{color:#FBF8F3;text-shadow:0 2px 28px rgba(9,20,25,.6)}
+.hero__rule{width:64px;height:2px;background:var(--gold-light);margin-bottom:1.6rem}
+.hero__sub{margin-top:1.35rem;color:#EAE3D9;text-shadow:0 1px 18px rgba(9,20,25,.7);font-size:1.0625rem;line-height:1.55;max-width:32ch}
+.hero__cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem}
+@media (min-width:720px){
+  .hero{padding-block:9rem 4.5rem}
+  .hero__copy{max-width:none;width:min(66%,800px)}
+  .hero__sub{font-size:1.15rem;max-width:44ch}
+  .hero::after{background:
+    linear-gradient(96deg,rgba(9,20,25,.92) 0%,rgba(9,20,25,.82) 38%,rgba(9,20,25,.5) 66%,rgba(9,20,25,.08) 90%),
+    linear-gradient(180deg,rgba(9,20,25,.6) 0%,rgba(9,20,25,0) 26%)}
+}
 
-/* ── Kontakt ────────────────────────────────────────────────────────── */
-.contact{display:grid;gap:1rem}
-@media (min-width:640px){.contact{grid-template-columns:repeat(3,1fr)}}
-.contact a{display:grid;justify-items:center;gap:.7rem;text-align:center;text-decoration:none;
-  background:var(--card);border:1px solid rgba(195,146,46,.18);border-radius:18px;
-  box-shadow:0 8px 30px rgba(90,70,40,.06);padding:clamp(1.75rem,4vw,2.25rem) 1.25rem;
-  transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease)}
-.contact a:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(90,70,40,.12);
-  border-color:rgba(195,146,46,.45)}
-.contact svg{color:var(--gold)}
-.contact strong{font-family:var(--ui);font-weight:500;font-size:.6875rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--muted)}
-.contact span{font-family:var(--serif);font-size:1.3rem;color:var(--ink);letter-spacing:.02em}
+/* ---------- Kapitel-Raster ------------------------------------- */
+.chapter{padding-block:var(--rhythm)}
+.chapter__grid{display:grid;gap:var(--gap)}
+@media (min-width:900px){
+  .chapter__grid{grid-template-columns:minmax(0,11rem) minmax(0,1.15fr) minmax(0,1fr);
+    gap:clamp(2rem,4vw,3.5rem);align-items:start}
+  .chapter__grid > figure{align-self:center}
+  .chapter__grid > .marker{position:sticky;top:6rem}
+}
+.chapter__head h2{margin-top:.6rem}
+.chapter__body{margin-top:1.4rem}
+.rule{height:1px;background:var(--line);border:0;margin-block:2rem}
 
-/* ── Footer ─────────────────────────────────────────────────────────── */
-.footer{background:var(--paper-deep);border-top:1px solid rgba(195,146,46,.28);
-  padding-block:clamp(3rem,8vw,4.5rem) clamp(4.5rem,7vw,5.5rem)}
-@media (max-width:639px){.footer__bottom{flex-direction:column;align-items:flex-start;gap:.9rem}}
-.footer__grid{display:grid;gap:2.5rem}
-@media (min-width:900px){.footer__grid{grid-template-columns:1.2fr 1fr 1fr}}
-.footer__logo{width:190px;height:auto;margin-bottom:1.5rem}
-.footer h2{font-family:var(--ui);font-weight:500;font-size:.6875rem;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--gold-deep);margin-bottom:1rem}
-.footer address{font-style:normal;color:var(--ink-soft)}
-.footer a{text-decoration:none;color:var(--ink-soft);transition:color .25s var(--ease)}
-.footer a:hover{color:var(--gold-deep)}
-.fhours{display:grid;gap:.4rem;font-size:.9375rem}
-.fhours div{display:flex;justify-content:space-between;gap:1.5rem;max-width:280px}
-.fhours dt{color:var(--muted)}
-.fhours dd{margin:0;color:var(--ink-soft);font-variant-numeric:tabular-nums}
-.footer__links{display:grid;gap:.5rem}
-.footer__bottom{display:flex;flex-wrap:wrap;gap:1rem 1.5rem;align-items:center;justify-content:space-between;
-  margin-top:clamp(2.5rem,6vw,3.5rem);padding-top:1.5rem;border-top:1px solid rgba(195,146,46,.28);
-  font-size:.8125rem;color:var(--muted)}
-.footer__bottom button{background:none;border:0;padding:0;cursor:pointer;color:var(--ink-soft);
-  text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(195,146,46,.6)}
-.footer__bottom button:hover{color:var(--gold-deep)}
+/* Angebot als Zeile mit Goldpunkten, keine Karten */
+.offer{display:flex;flex-wrap:wrap;gap:.55rem 1.4rem;margin-top:1.6rem;
+  font-family:var(--display);font-weight:500;font-stretch:106%;font-size:.94rem;
+  letter-spacing:.02em;color:var(--ink)}
+.offer li{position:relative;padding-left:1rem}
+.offer li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;
+  border-radius:50%;background:var(--gold)}
+.night .offer{color:var(--night-text)}
+.night .offer li::before{background:var(--gold-light)}
 
-/* ── Kaiserstuhl Digital chrome (navy lives here and nowhere else) ──── */
-.kd-credit{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;
-  background:var(--kd-navy);color:var(--kd-gold);border-radius:999px;
-  padding:.4rem .95rem;font-size:.75rem;letter-spacing:.06em}
-.footer .kd-credit,.kd-credit{color:var(--kd-gold)}
-.footer .kd-credit:hover,.kd-credit:hover{color:var(--kd-gold);opacity:.88}
-.kd-badge{position:fixed;z-index:850;
-  right:max(clamp(.75rem,2.5vw,1.25rem),env(safe-area-inset-right,0px));
-  bottom:calc(clamp(.75rem,2.5vw,1.25rem) + env(safe-area-inset-bottom,0px));
-  display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;
-  background:var(--kd-navy);color:var(--kd-gold);border-radius:999px;
-  padding:.55rem 1rem;font-size:.75rem;letter-spacing:.04em;
-  box-shadow:0 8px 26px rgba(15,22,40,.28);transition:transform .3s var(--ease)}
-.kd-badge:hover{transform:translateY(-2px)}
-.kd-badge__dot{width:6px;height:6px;border-radius:50%;background:var(--kd-gold);flex:none}
-@media (max-width:639px){.kd-badge{font-size:.6875rem;padding:.45rem .8rem;gap:.4rem}}
+/* Bildrahmen: Hochformat mit Bogen, Querformat mit Kante,
+   beide mit der Goldlinie aus den Regalen. */
+.frame{position:relative;margin:0}
+.frame img{width:100%;border-radius:var(--r-flat);
+  outline:1px solid var(--line);outline-offset:8px}
+.frame--arch img{border-radius:var(--arch) var(--arch) var(--r-flat) var(--r-flat)}
+.night .frame img{outline-color:var(--line-night)}
+@media (min-width:900px){.frame img{outline-offset:12px}}
+.cap{margin-top:1.1rem;font-size:.9rem;color:var(--ink-60)}
 
-/* ── Impressum dialog ───────────────────────────────────────────────── */
-dialog{border:0;padding:0;max-width:min(640px,92vw);width:100%;background:transparent}
-dialog::backdrop{background:rgba(20,20,20,.55);backdrop-filter:blur(3px)}
-.imp{background:var(--card);border:1px solid rgba(195,146,46,.28);border-radius:20px;
-  padding:clamp(1.75rem,5vw,2.5rem);max-height:82vh;overflow-y:auto;
-  box-shadow:0 24px 70px rgba(40,30,15,.28)}
-.imp h2{font-family:var(--serif);font-weight:400;text-transform:uppercase;letter-spacing:.12em;
-  color:var(--ink);font-size:1.6rem;margin-bottom:1.25rem}
-.imp h3{font-family:var(--ui);font-weight:500;font-size:.6875rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--gold-deep);margin-top:1.5rem;margin-bottom:.35rem}
-.imp p{font-size:.9375rem;line-height:1.65}
-.imp .todo{color:var(--muted);font-style:italic}
-.imp__close{margin-top:2rem;width:100%;cursor:pointer}
+/* ---------- Abendteil, der eine dunkle Block ------------------- */
+.night{background:var(--night);color:var(--night-text);position:relative;
+  padding-block:var(--rhythm)}
+.night h2,.night .display{color:var(--night-text)}
+.night .marker{color:var(--gold-light)}
+.night p{color:var(--night-text-60)}
+@media (min-width:900px){
+  .night .chapter__grid{grid-template-columns:minmax(0,11rem) minmax(0,1fr)}
+  .night .chapter__head{max-width:46rem}
+}
+.night__pair{display:grid;gap:var(--gap);margin-top:clamp(2.5rem,6vw,4rem)}
+@media (min-width:900px){
+  .night__pair{grid-template-columns:5fr 7fr;align-items:end;gap:clamp(2rem,4vw,3.5rem)}
+  .night__pair .frame:first-child{transform:translateY(-2.5rem)}
+}
+.night__wide{margin-top:clamp(2.5rem,6vw,4rem)}
+.night__wide img{width:100%;aspect-ratio:1400/580;object-fit:cover;border-radius:var(--r-flat)}
+@media (max-width:719px){.night__wide img{aspect-ratio:16/11}}
 
-/* ── Motion ─────────────────────────────────────────────────────────── */
-.rise{opacity:0;transform:translateY(24px);
-  transition:opacity .6s var(--ease),transform .6s var(--ease);
+/* ---------- Oeffnungszeiten ------------------------------------ */
+.hours{display:grid;gap:var(--gap)}
+@media (min-width:900px){.hours{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);
+  gap:clamp(2.5rem,6vw,5rem);align-items:start}}
+.status{display:inline-flex;align-items:center;gap:.6rem;padding:.45rem 1rem .45rem .8rem;
+  border:1px solid var(--line);border-radius:var(--r-pill);
+  font-family:var(--display);font-weight:600;font-stretch:108%;font-size:.78rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.status__dot{width:8px;height:8px;border-radius:50%;background:var(--ink-60);flex:none}
+.status[data-state="open"] .status__dot{background:#2F6B46}
+.status[data-state="closed"] .status__dot{background:#A2563F}
+.hours__list{display:grid;grid-template-columns:auto 1fr;align-items:baseline;column-gap:1rem}
+.hours__list dt,.hours__list dd{padding-block:1.05rem;border-bottom:1px solid var(--line)}
+.hours__list dt{font-family:var(--display);font-weight:500;font-stretch:110%;
+  font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.hours__list dd{text-align:right;font-family:var(--display);font-weight:400;font-stretch:104%;
+  font-size:1.35rem;font-variant-numeric:tabular-nums;color:var(--ink)}
+.hours__list .is-off{color:var(--ink-60);font-size:1.05rem;letter-spacing:.1em;text-transform:uppercase}
+.hours__note{margin-top:1.5rem;color:var(--ink-60);font-size:.95rem}
+
+/* ---------- Bilderstreifen ------------------------------------- */
+.strip{
+  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(76vw,20rem);
+  gap:1rem;overflow-x:auto;overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory;
+  --edge:max(var(--pad),(100% - var(--shell))/2 + var(--pad));
+  scroll-padding-left:var(--edge);
+  padding-inline:var(--edge);padding-bottom:1.25rem;padding-top:12px;
+  scrollbar-width:thin;scrollbar-color:var(--line) transparent;
+}
+.strip figure{scroll-snap-align:start;margin:0}
+.strip img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-flat)}
+.strip figcaption{margin-top:.85rem;font-size:.9rem;color:var(--ink-60)}
+@media (min-width:900px){
+  /* Kontaktbogen: gleiche Hoehe, Breite nach Originalformat */
+  .strip{grid-auto-columns:auto;gap:1.75rem}
+  .strip img{height:26rem;width:auto;max-width:none;aspect-ratio:auto}
+  .strip figcaption{max-width:26rem}
+}
+.strip__nav{display:none}
+@media (min-width:900px){
+  .strip__nav{display:flex;gap:.6rem}
+  .strip__nav button{width:48px;height:48px;border:1.5px solid var(--ink);border-radius:var(--r-pill);
+    display:grid;place-items:center;cursor:pointer;
+    transition:background-color .2s var(--ease),color .2s var(--ease)}
+  .strip__nav button:hover{background:var(--ink);color:var(--paper)}
+  .chev{width:9px;height:9px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor}
+  .chev--r{transform:translateX(-2px) rotate(45deg)}
+  .chev--l{transform:translateX(2px) rotate(-135deg)}
+}
+.strip__head{display:flex;align-items:end;justify-content:space-between;gap:1.5rem}
+#impressionen{padding-top:calc(var(--rhythm) * .6)}
+
+/* ---------- Ueber uns ------------------------------------------ */
+.about{background:var(--oat);padding-block:var(--rhythm)}
+.about__grid{display:grid;gap:var(--gap)}
+@media (min-width:900px){
+  .about__grid{grid-template-columns:5fr 6fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+}
+.about img{aspect-ratio:4/5;object-fit:cover}
+.names{margin-top:1.8rem;font-family:var(--display);font-weight:600;font-stretch:112%;
+  font-size:1.05rem;letter-spacing:.04em;color:var(--ink)}
+.names span{display:block;font-family:var(--body);font-weight:400;font-stretch:normal;
+  font-size:.9rem;letter-spacing:0;color:var(--ink-60);margin-top:.2rem}
+
+/* ---------- Hierher / Kontakt ---------------------------------- */
+.find{padding-block:var(--rhythm)}
+.find__grid{display:grid;gap:var(--gap)}
+@media (min-width:900px){.find__grid{grid-template-columns:1.1fr 1fr;gap:clamp(2.5rem,6vw,5rem)}}
+.addr{font-style:normal}
+.addr .display{margin-bottom:1rem}
+.links{border-top:1px solid var(--line)}
+.links a{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  min-height:56px;padding-block:1rem;border-bottom:1px solid var(--line);
+  text-decoration:none;transition:padding-left .2s var(--ease)}
+.links a:hover{padding-left:.5rem}
+.links .k{font-family:var(--display);font-weight:600;font-stretch:110%;font-size:.76rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold-ink)}
+.links .v{font-size:1.05rem;color:var(--ink);text-align:right}
+
+/* ---------- Footer --------------------------------------------- */
+.foot{background:var(--oat);border-top:1px solid var(--line);padding-block:clamp(2.5rem,7vw,4rem)}
+.foot__grid{display:grid;gap:2rem}
+@media (min-width:720px){.foot__grid{grid-template-columns:auto 1fr auto;align-items:start}}
+.foot img{height:64px;width:auto}
+.foot__meta{font-size:.95rem;color:var(--ink-60)}
+.foot__meta a{color:var(--ink);display:inline-flex;align-items:center;min-height:44px}
+.foot__bottom{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.5rem;
+  margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--ink-60)}
+.foot__bottom button{cursor:pointer;text-decoration:underline;text-underline-offset:3px;
+  display:inline-flex;align-items:center;min-height:44px}
+.footer__credit{
+  display:inline-flex;align-items:center;gap:.5rem;margin-left:auto;min-height:44px;
+  padding:.5rem 1rem;border-radius:var(--r-pill);
+  background:#0f1628;color:#C9A84C;text-decoration:none;
+  font-family:var(--display);font-weight:600;font-stretch:106%;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase
+}
+.footer__credit:hover{color:#fff}
+
+/* ---------- Demo-Badge (Kaiserstuhl-Chrome) -------------------- */
+.badge{
+  position:fixed;top:.75rem;right:.75rem;z-index:60;
+  display:inline-flex;align-items:center;gap:.45rem;
+  padding:.4rem .8rem;border-radius:var(--r-pill);
+  background:#0f1628;color:#C9A84C;text-decoration:none;
+  font-family:var(--display);font-weight:600;font-stretch:104%;
+  font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+  box-shadow:0 6px 20px rgba(9,20,25,.28)
+}
+.badge:hover{color:#fff}
+@media (min-width:760px){.badge{top:auto;right:auto;bottom:1rem;left:1rem;padding:.55rem 1rem}}
+
+/* ---------- Mobile Aktionsleiste -------------------------------- */
+.callbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:55;
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  transform:translateY(110%);transition:transform .3s var(--ease)
+}
+.callbar.is-on{transform:translateY(0)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:.5rem;
+  min-height:56px;background:var(--paper);color:var(--ink);text-decoration:none;
+  font-family:var(--display);font-weight:600;font-stretch:106%;font-size:.85rem;letter-spacing:.04em}
+.callbar a:first-child{background:var(--ink);color:var(--paper)}
+@media (min-width:760px){.callbar{display:none}}
+@media (max-width:759px){.foot{padding-bottom:calc(4.5rem + env(safe-area-inset-bottom,0px))}}
+
+/* ---------- Impressum ------------------------------------------ */
+.imp{border:0;padding:0;max-width:38rem;width:calc(100% - 2rem);
+  background:var(--paper);color:var(--ink);border-radius:var(--r-flat);
+  box-shadow:0 24px 60px rgba(9,20,25,.35)}
+.imp::backdrop{background:rgba(9,20,25,.6)}
+.imp__in{padding:clamp(1.5rem,5vw,2.5rem);max-height:82vh;overflow:auto}
+.imp h2{margin-bottom:1.25rem}
+.imp dl{display:grid;gap:.2rem;margin-top:1.5rem}
+.imp dt{font-family:var(--display);font-weight:600;font-stretch:110%;font-size:.74rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--gold-ink);margin-top:1.1rem}
+.imp dd{margin:0}
+.imp__close{margin-top:2rem}
+
+/* ---------- Bewegung -------------------------------------------- */
+.rise{opacity:0;transform:translateY(18px)}
+.rise.is-in{opacity:1;transform:none;
+  transition:opacity .7s var(--ease),transform .7s var(--ease);
   transition-delay:calc(var(--i,0) * 90ms)}
-.rise.is-in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
-    transition-duration:.001ms !important;transition-delay:0ms !important}
-  .rise{opacity:1;transform:none}
+.hero__copy > *{opacity:0;transform:translateY(14px);
+  animation:heroIn .8s var(--ease) forwards;animation-delay:calc(.15s + var(--i,0) * .09s)}
+@keyframes heroIn{to{opacity:1;transform:none}}
+.hero__media img{animation:heroZoom 1.6s var(--ease) both}
+@keyframes heroZoom{from{transform:scale(1.06)}to{transform:scale(1)}}
+@media (prefers-reduced-motion: reduce){
+  .rise,.rise.is-in{opacity:1;transform:none;transition:none}
+  .hero__copy > *{opacity:1;transform:none;animation:none}
+  .hero__media img{animation:none}
+  .progress{display:none}
+  .callbar{transition:none}
+  *{scroll-behavior:auto !important}
 }
 </style>
 </head>
+<body id="top">
 
-<body data-hero="photo">
 <a class="skip" href="#main">Zum Inhalt springen</a>
+<div class="progress" aria-hidden="true"></div>
 
-<!-- ══ Header ══════════════════════════════════════════════════════ -->
-<header class="header" id="header">
-  <div class="shell header__in">
-    <a class="brand" href="#top" aria-label="Bertolds Cafébar, zum Seitenanfang">
-      <img class="brand__dark" src="assets/logo/logo_bertolds.png" width="760" height="668" alt="Bertolds Cafébar">
-      <img class="brand__light" src="assets/logo/logo_bertolds_weiss.png" width="760" height="668" alt="" aria-hidden="true">
+<a class="badge" href="https://kaiserstuhl-digital.de" target="_blank" rel="noopener noreferrer">
+  Demo von Kaiserstuhl Digital
+</a>
+
+<header class="head">
+  <div class="shell head__in">
+    <a class="head__logo" href="#top" aria-label="Bertolds Cafébar, zum Seitenanfang">
+      <img src="assets/logo/logo_bertolds_weiss.png" width="760" height="668" alt="Logo der Bertolds Cafébar">
     </a>
-    <a class="btn btn--text" href="tel:+4976138493619">Reservieren</a>
-    <a class="btn btn--icon" href="tel:+4976138493619" aria-label="Bertolds anrufen und reservieren">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 2.9 9 3.6a1.4 1.4 0 0 1 1 1.3l.1 2.4a1.4 1.4 0 0 1-.7 1.3l-1.3.8a12 12 0 0 0 5.5 5.5l.8-1.3a1.4 1.4 0 0 1 1.3-.7l2.4.1a1.4 1.4 0 0 1 1.3 1l.7 2.4a1.4 1.4 0 0 1-1 1.7A16.4 16.4 0 0 1 4.9 4.2a1.4 1.4 0 0 1 1.7-1.3Z"/></svg>
-    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#karte">Tag &amp; Abend</a>
+      <a href="#oeffnungszeiten">Öffnungszeiten</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#anfahrt">Anfahrt</a>
+    </nav>
   </div>
 </header>
 
 <main id="main">
-<span id="top"></span>
 
-<!-- ══ Hero ════════════════════════════════════════════════════════ -->
-<section class="hero" aria-labelledby="hero-title">
-  <picture>
-    <source media="(max-width:639px)" srcset="assets/img/hero-hoch.webp" width="1100" height="1500">
-    <img class="hero__bg" src="assets/img/hero.webp" width="2000" height="1200" alt="" aria-hidden="true" fetchpriority="high">
-  </picture>
-  <div class="shell">
-    <p class="kicker">Mitten in Freiburg</p>
-    <h1 class="hero__title" id="hero-title">Café am Tag.<br>Bar am Abend.</h1>
-    <p class="hero__meta">Bertoldstraße 48 &nbsp;·&nbsp; 79098 Freiburg</p>
-    <div class="hero__cta">
-      <a class="btn btn--solid" href="tel:+4976138493619">Reservieren</a>
-      <a class="btn" href="#karte">Karte ansehen</a>
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero__media">
+      <picture>
+        <source media="(max-width: 719px)" srcset="assets/img/hero-hoch.webp" width="1100" height="1500">
+        <img src="assets/img/hero.webp" width="2000" height="1200" fetchpriority="high" decoding="async"
+             alt="Die Bar im Bertolds: dunkle Rückwand mit goldenen Regalen, beleuchtetem Schriftzug BERTOLDS und der Theke davor">
+      </picture>
     </div>
-  </div>
-  <a class="hero__scroll" href="#ueber-uns" aria-label="Weiter zum Inhalt">
-    <span>Scrollen</span>
-    <svg width="16" height="22" viewBox="0 0 16 22" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v16M3 13l5 5 5-5"/></svg>
-  </a>
-</section>
-
-<!-- ══ Über uns ════════════════════════════════════════════════════ -->
-<section class="section" id="ueber-uns" aria-labelledby="ueber-titel">
-  <div class="shell about">
-    <div class="about__text rise">
-      <p class="kicker">Wer wir sind</p>
-      <h2 class="h2" id="ueber-titel">Über uns</h2>
-      <svg class="divider divider--left" viewBox="0 0 230 12" fill="none" aria-hidden="true">
-        <path d="M0 6h100M130 6h100" stroke="currentColor" stroke-width="1"/>
-        <path d="M115 1.5 119.5 6 115 10.5 110.5 6Z" fill="currentColor"/>
-      </svg>
-      <div class="lead" style="margin-top:1.75rem">
-        <p>Seit 2023 stehen wir in der Bertoldstraße, keine zwei Minuten vom Bertoldsbrunnen.</p>
-        <p>Vasko Apostolov und Jonas Heitzler haben den Laden aufgemacht.</p>
-        <p>Tagsüber gibt es Kaffee und Kuchen, dazu einen Platz am Fenster.</p>
-        <p>Ab 17 Uhr wird aus dem Café eine Bar.</p>
+    <div class="shell">
+      <div class="hero__copy">
+        <div class="hero__rule" style="--i:0" aria-hidden="true"></div>
+        <h1 class="display display--xl" style="--i:1">Erst Kaffee.<br>Dann Aperitivo.</h1>
+        <p class="hero__sub" style="--i:2">Bertoldstraße 48, zwei Minuten vom Bertoldsbrunnen. Frühstück ab 8 Uhr, ab 17 Uhr Bar.</p>
+        <div class="hero__cta" style="--i:3">
+          <a class="btn btn--onphoto" href="tel:+4976138493619">Anrufen</a>
+          <a class="btn btn--onphoto-ghost" href="https://www.instagram.com/bertolds_freiburg/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
       </div>
-      <p class="sig">Vasko &amp; Jonas</p>
     </div>
-    <figure class="about__figure rise" style="--i:1">
-      <img src="assets/img/ueber-uns.webp" width="1000" height="1250" loading="lazy" decoding="async"
-           alt="Samtbank am Fenster, darüber ein Baum aus weißen Blüten, auf dem Tisch ein Drink und ein Stück Kuchen">
-    </figure>
-  </div>
-</section>
+    <div id="hero-end" aria-hidden="true" style="position:absolute;left:0;bottom:0;width:1px;height:1px"></div>
+  </section>
 
-<!-- ══ Tag & Abend ═════════════════════════════════════════════════ -->
-<section class="section section--deep section--framed" id="karte" aria-labelledby="karte-titel">
-  <svg class="leaf leaf--l" viewBox="0 0 160 300" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
-    <path d="M14 0C14 60 26 120 52 168c22 40 50 74 84 106"/>
-    <path d="M18 42c22-4 40 6 48 26-20 8-40-2-48-26ZM18 42c-8 20-4 40 12 52 12-16 12-36-12-52Z"/>
-    <path d="M28 104c22-2 40 10 46 30-20 6-40-6-46-30ZM28 104c-6 20 0 40 16 50 10-16 8-36-16-50Z"/>
-    <path d="M46 166c21-1 38 12 43 32-20 5-38-8-43-32ZM46 166c-5 20 2 39 18 48 9-17 6-36-18-48Z"/>
-    <path d="M74 222c20 1 35 14 39 33-19 4-35-10-39-33ZM74 222c-6 19 0 37 15 46 9-16 7-34-15-46Z"/>
-    <circle cx="136" cy="274" r="3.4"/>
-  </svg>
-  <svg class="leaf leaf--r" viewBox="0 0 160 300" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
-    <path d="M14 0C14 60 26 120 52 168c22 40 50 74 84 106"/>
-    <path d="M18 42c22-4 40 6 48 26-20 8-40-2-48-26ZM18 42c-8 20-4 40 12 52 12-16 12-36-12-52Z"/>
-    <path d="M28 104c22-2 40 10 46 30-20 6-40-6-46-30ZM28 104c-6 20 0 40 16 50 10-16 8-36-16-50Z"/>
-    <path d="M46 166c21-1 38 12 43 32-20 5-38-8-43-32ZM46 166c-5 20 2 39 18 48 9-17 6-36-18-48Z"/>
-    <path d="M74 222c20 1 35 14 39 33-19 4-35-10-39-33ZM74 222c-6 19 0 37 15 46 9-16 7-34-15-46Z"/>
-    <circle cx="136" cy="274" r="3.4"/>
-  </svg>
-
-  <div class="shell" style="position:relative;z-index:1">
-    <div class="head rise">
-      <p class="kicker">Was es gibt</p>
-      <h2 class="h2" id="karte-titel">Tag &amp; Abend</h2>
-      <svg class="divider" viewBox="0 0 230 12" fill="none" aria-hidden="true">
-        <path d="M0 6h100M130 6h100" stroke="currentColor" stroke-width="1"/>
-        <path d="M115 1.5 119.5 6 115 10.5 110.5 6Z" fill="currentColor"/>
-      </svg>
-    </div>
-
-    <div class="duo">
-      <article class="panel rise">
-        <img class="panel__img" src="assets/img/tagsueber.webp" width="900" height="600" loading="lazy" decoding="async"
-             alt="Cappuccino mit Herz im Milchschaum auf grüner Tasse, daneben Blumen und Zuckerstreuer">
-        <div class="panel__body">
-        <svg class="panel__ico" width="34" height="34" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M5 12h17v8a7 7 0 0 1-7 7h-3a7 7 0 0 1-7-7v-8Z"/>
-          <path d="M22 14h2.5a3.5 3.5 0 0 1 0 7H22"/>
-          <path d="M10 3v3M14 2.5V6M18 3v3"/>
-        </svg>
-        <h3>Tagsüber</h3>
-        <p class="panel__when">Frühstück ab 8 Uhr</p>
-        <p>Kaffee, Matcha und was aus der Vitrine. Nimm dir Zeit, den Platz brauchst du nicht abzugeben.</p>
-        <ul class="tags">
-          <li>Kaffee &amp; Matcha</li><li>Donuts</li><li>Muffins</li><li>Kuchen</li><li>Frühstück</li>
-        </ul>
+  <!-- ===== 08:00 ===== -->
+  <section class="chapter" id="karte" aria-labelledby="tag-titel">
+    <div class="shell chapter__grid">
+      <p class="marker rise" style="--i:0">08:00</p>
+      <div class="chapter__head rise" style="--i:1">
+        <h2 class="display display--l" id="tag-titel">Der Tag fängt mit Frühstück an.</h2>
+        <div class="chapter__body prose">
+          <p>Kaffee, Matcha und was aus der Vitrine. Frühstück gibt es ab 8 Uhr, samstags ab halb zehn.</p>
+          <p>Nimm dir Zeit. Den Tisch brauchst du nicht abzugeben.</p>
         </div>
-      </article>
-
-      <article class="panel rise" style="--i:1">
-        <img class="panel__img" src="assets/img/abends.webp" width="900" height="600" loading="lazy" decoding="async"
-             alt="Aperol Spritz mit Orangenscheibe am Abend, im Hintergrund die blau beleuchtete Bar">
-        <div class="panel__body">
-        <svg class="panel__ico" width="34" height="34" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M4 6h24L16 19 4 6Z"/>
-          <path d="M16 19v9M11 28h10"/>
-          <path d="M22 3.5c1.6 0 2.6.9 2.6 2"/>
-        </svg>
-        <h3>Ab 17 Uhr</h3>
-        <p class="panel__when">Aperitivo-Time</p>
-        <p>Aperitifs, Cocktails und was Salziges dazu. Der Espresso Martini geht immer.</p>
-        <ul class="tags">
-          <li>Aperitifs</li><li>Cocktails</li><li>Espresso Martini</li><li>Salzige Kleinigkeiten</li>
-        </ul>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ══ Öffnungszeiten ══════════════════════════════════════════════ -->
-<section class="section" id="oeffnungszeiten" aria-labelledby="zeiten-titel">
-  <div class="shell">
-    <div class="head rise">
-      <p class="pill" id="status-pill" data-state="" hidden>
-        <span class="pill__dot" aria-hidden="true"></span><span id="status-text"></span>
-      </p>
-      <p class="kicker">Unsere</p>
-      <h2 class="h2" id="zeiten-titel">Öffnungszeiten</h2>
-      <svg class="divider" viewBox="0 0 230 12" fill="none" aria-hidden="true">
-        <path d="M0 6h100M130 6h100" stroke="currentColor" stroke-width="1"/>
-        <path d="M115 1.5 119.5 6 115 10.5 110.5 6Z" fill="currentColor"/>
-      </svg>
-    </div>
-
-    <ul class="hours">
-      <li class="hour rise">
-        <svg class="hour__ico" width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="4" y="6.5" width="24" height="21.5" rx="3.5"/>
-          <path d="M4 13h24M10.5 3v6M21.5 3v6"/>
-        </svg>
-        <span class="hour__label">Mo – Do</span>
-        <span class="hour__rule" aria-hidden="true"></span>
-        <span class="hour__val">08:00 – 22:00</span>
-      </li>
-      <li class="hour rise" style="--i:1">
-        <svg class="hour__ico" width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M5 6h22L16 18.5 5 6Z"/>
-          <path d="M16 18.5V27M11 27h10M25 3.2c1.4 0 2.3.8 2.3 1.8"/>
-        </svg>
-        <span class="hour__label">Freitag</span>
-        <span class="hour__rule" aria-hidden="true"></span>
-        <span class="hour__val">08:00 – 01:00</span>
-      </li>
-      <li class="hour rise" style="--i:2">
-        <svg class="hour__ico" width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M13 24V6.5l13-2.5V21"/>
-          <ellipse cx="9.5" cy="24.5" rx="4.5" ry="3.5"/>
-          <ellipse cx="22.5" cy="21.5" rx="4.5" ry="3.5"/>
-          <path d="M13 11.5 26 9"/>
-        </svg>
-        <span class="hour__label">Samstag</span>
-        <span class="hour__rule" aria-hidden="true"></span>
-        <span class="hour__val">09:30 – 02:00</span>
-      </li>
-      <li class="hour hour--closed rise" style="--i:3">
-        <svg class="hour__ico" width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M16 3.5 27 7.5v8.2c0 6.2-4.4 11-11 12.8-6.6-1.8-11-6.6-11-12.8V7.5L16 3.5Z"/>
-          <path d="M12 12.5h8M12 17.5h8"/>
-        </svg>
-        <span class="hour__label">Sonntag</span>
-        <span class="hour__rule" aria-hidden="true"></span>
-        <span class="hour__val">Geschlossen</span>
-      </li>
-    </ul>
-
-    <p class="hours__outro rise" style="--i:4">
-      <span>Wir freuen uns auf euch!</span>
-      <svg width="26" height="24" viewBox="0 0 26 24" fill="currentColor" aria-hidden="true">
-        <path d="M13 22.5 3.8 13.6A5.9 5.9 0 0 1 13 6.3a5.9 5.9 0 0 1 9.2 7.3L13 22.5Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
-      </svg>
-    </p>
-  </div>
-</section>
-
-<!-- ══ Impressionen ════════════════════════════════════════════════ -->
-<section class="section section--deep" id="impressionen" aria-labelledby="galerie-titel">
-  <div class="shell">
-    <div class="head rise">
-      <p class="kicker">Ein Blick rein</p>
-      <h2 class="h2" id="galerie-titel">Impressionen</h2>
-      <svg class="divider" viewBox="0 0 230 12" fill="none" aria-hidden="true">
-        <path d="M0 6h100M130 6h100" stroke="currentColor" stroke-width="1"/>
-        <path d="M115 1.5 119.5 6 115 10.5 110.5 6Z" fill="currentColor"/>
-      </svg>
-    </div>
-    <div class="bento rise">
-      <figure><img src="assets/img/galerie-raum.webp" width="1200" height="1000" loading="lazy" decoding="async" alt="Gastraum mit runden Tischen, blauen Samtstühlen und der beleuchteten Bar im Hintergrund"></figure>
-      <figure><img src="assets/img/galerie-theke.webp" width="700" height="1160" loading="lazy" decoding="async" alt="Barista an der Theke vor der Flaschenwand"></figure>
-      <figure><img src="assets/img/galerie-lounge.webp" width="700" height="1160" loading="lazy" decoding="async" alt="Türkise Samtbank unter einem Baum aus weißen Blüten"></figure>
-      <figure><img src="assets/img/galerie-bar.webp" width="1400" height="580" loading="lazy" decoding="async" alt="Die Barwand mit goldenen Regalen und dem beleuchteten Schriftzug BERTOLDS"></figure>
-      <figure><img src="assets/img/galerie-kaffee.webp" width="700" height="580" loading="lazy" decoding="async" alt="Cappuccino mit Herz im Milchschaum auf einer grünen Tasse"></figure>
-      <figure><img src="assets/img/galerie-spritz.webp" width="700" height="580" loading="lazy" decoding="async" alt="Aperol Spritz mit Orangenscheibe auf dem Tisch"></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ══ Anfahrt ═════════════════════════════════════════════════════ -->
-<section class="section" id="anfahrt" aria-labelledby="anfahrt-titel">
-  <div class="shell">
-    <div class="head rise">
-      <p class="kicker">So findest du uns</p>
-      <h2 class="h2" id="anfahrt-titel">Anfahrt</h2>
-      <svg class="divider" viewBox="0 0 230 12" fill="none" aria-hidden="true">
-        <path d="M0 6h100M130 6h100" stroke="currentColor" stroke-width="1"/>
-        <path d="M115 1.5 119.5 6 115 10.5 110.5 6Z" fill="currentColor"/>
-      </svg>
-    </div>
-
-    <div class="way">
-      <div class="rise">
-        <p class="lead">Zwei Minuten vom Bertoldsbrunnen. Dort halten alle Straßenbahnlinien.</p>
-        <ul class="facts">
-          <li class="fact">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
-            <span><strong>Adresse</strong>Bertoldstraße 48, 79098 Freiburg im Breisgau</span>
-          </li>
-          <li class="fact">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3.5"/><path d="M5 11h14M8.5 21l2-4M15.5 21l-2-4"/><circle cx="8.8" cy="14" r=".9" fill="currentColor" stroke="none"/><circle cx="15.2" cy="14" r=".9" fill="currentColor" stroke="none"/></svg>
-            <span><strong>Straßenbahn</strong>Haltestelle Bertoldsbrunnen, alle Linien</span>
-          </li>
+        <ul class="offer">
+          <li>Kaffee &amp; Matcha</li>
+          <li>Frühstück</li>
+          <li>Donuts</li>
+          <li>Muffins</li>
+          <li>Kuchen</li>
         </ul>
       </div>
+      <figure class="frame rise" style="--i:2">
+        <img src="assets/img/tagsueber.webp" width="900" height="600" loading="lazy" decoding="async"
+             alt="Cappuccino mit Herz im Milchschaum auf einer grünen Tasse, daneben Blumen und ein Zuckerstreuer">
+        <figcaption class="cap">Cappuccino am Vormittag.</figcaption>
+      </figure>
+    </div>
+  </section>
 
-      <a class="map rise" style="--i:1"
-         href="https://www.google.com/maps/search/?api=1&amp;query=Bertoldstra%C3%9Fe%2048%2C%2079098%20Freiburg%20im%20Breisgau"
-         target="_blank" rel="noopener noreferrer"
-         aria-label="Bertoldstraße 48 in Google Maps öffnen (öffnet in neuem Tab)">
-        <svg viewBox="0 0 600 380" role="img" aria-label="Gezeichnete Umgebungskarte: die Bertoldstraße führt vom Bertoldsbrunnen zu Bertolds Cafébar">
-          <rect width="600" height="380" rx="12" fill="#F7F1E9"/>
-          <g stroke="#DCC08A" stroke-width="1" opacity=".45">
-            <path d="M0 76h600M0 152h600M0 228h600M0 304h600M96 0v380M216 0v380M336 0v380M456 0v380"/>
-          </g>
-          <g fill="none" stroke="#C3922E" stroke-linecap="round">
-            <path d="M40 250 L560 150" stroke-width="9" opacity=".22"/>
-            <path d="M40 250 L560 150" stroke-width="2.2"/>
-            <path d="M470 30 L420 350" stroke-width="6" opacity=".18"/>
-            <path d="M470 30 L420 350" stroke-width="1.6"/>
-            <path d="M120 20 L175 360" stroke-width="6" opacity=".18"/>
-            <path d="M120 20 L175 360" stroke-width="1.6"/>
-            <path d="M60 60 L560 320" stroke-width="1.2" stroke-dasharray="7 9" opacity=".7"/>
-          </g>
-          <g font-family="Jost, Arial, sans-serif" font-size="13" letter-spacing="2.6" fill="#6E655A">
-            <text x="150" y="228" transform="rotate(-11 150 228)">BERTOLDSTRASSE</text>
-            <text x="398" y="348" transform="rotate(-81 398 348)">KAISER-JOSEPH-STR.</text>
-          </g>
-          <g>
-            <circle cx="447" cy="182" r="26" fill="none" stroke="#C3922E" stroke-width="1" opacity=".5"/>
-            <circle cx="447" cy="182" r="8" fill="#C3922E"/>
-            <text x="447" y="145" text-anchor="middle" font-family="Jost, Arial, sans-serif" font-size="13" font-weight="500" letter-spacing="2.4" fill="#6E655A">BERTOLDSBRUNNEN</text>
-          </g>
-          <g>
-            <path d="M168 244c0 15 22 34 22 34s22-19 22-34a22 22 0 1 0-44 0Z" fill="#141414"/>
-            <circle cx="190" cy="244" r="7.5" fill="#F7F1E9"/>
-            <text x="190" y="308" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="21" letter-spacing="4" fill="#141414">BERTOLDS</text>
-          </g>
-          <g fill="none" stroke="#DCC08A" stroke-width="1" stroke-linecap="round" opacity=".8">
-            <path d="M528 300c0 20 8 40 24 56"/>
-            <path d="M530 314c12-3 22 3 26 15-11 4-22-2-26-15Z"/>
-            <path d="M538 334c12-2 21 5 25 17-11 3-21-4-25-17Z"/>
-          </g>
-        </svg>
-        <p class="map__note">
-          <span>In Google Maps öffnen</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+  <!-- ===== 17:00, der dunkle Block ===== -->
+  <section class="night" id="abends" aria-labelledby="abend-titel">
+    <div class="shell chapter__grid">
+      <p class="marker rise" style="--i:0">17:00</p>
+      <div class="chapter__head rise" style="--i:1">
+        <h2 class="display display--l" id="abend-titel">Ab 17 Uhr wird aus dem Café eine Bar.</h2>
+        <div class="chapter__body prose">
+          <p>Aperitivo, Cocktails, Espresso Martini, dazu was Salziges. Freitags bis 1 Uhr, samstags bis 2.</p>
+        </div>
+        <ul class="offer">
+          <li>Aperitivo</li>
+          <li>Cocktails</li>
+          <li>Espresso Martini</li>
+          <li>Salzige Kleinigkeiten</li>
+        </ul>
+      </div>
+    </div>
+    <div class="shell">
+      <div class="night__pair">
+        <figure class="frame frame--arch rise" style="--i:0">
+          <img src="assets/img/galerie-spritz.webp" width="700" height="580" loading="lazy" decoding="async"
+               style="aspect-ratio:4/5;object-fit:cover"
+               alt="Spritz im Weinglas mit Strohhalm, im Hintergrund das unscharfe Licht der Bar">
+        </figure>
+        <figure class="frame rise" style="--i:1">
+          <img src="assets/img/galerie-theke.webp" width="700" height="1160" loading="lazy" decoding="async"
+               style="aspect-ratio:4/5;object-fit:cover"
+               alt="Blick über einen Tisch zur Theke, dahinter das goldene Regal mit Flaschen und Gläsern">
+        </figure>
+      </div>
+      <figure class="frame night__wide rise" style="--i:0">
+        <img src="assets/img/galerie-bar.webp" width="1400" height="580" loading="lazy" decoding="async"
+             alt="Die ganze Barwand mit dem beleuchteten Schriftzug BERTOLDS und den goldenen Regalen">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== Öffnungszeiten ===== -->
+  <section class="chapter" id="oeffnungszeiten" aria-labelledby="zeiten-titel">
+    <div class="shell hours">
+      <div class="rise" style="--i:0">
+        <p class="status" id="status" data-state="unknown" hidden>
+          <span class="status__dot" aria-hidden="true"></span><span id="status-text"></span>
         </p>
-      </a>
+        <h2 class="display display--l" id="zeiten-titel">Öffnungszeiten</h2>
+        <p class="hours__note">Sonntags ist zu. An Feiertagen ruf lieber kurz an.</p>
+      </div>
+      <dl class="hours__list rise" style="--i:1">
+        <dt>Mo bis Do</dt><dd>08:00 - 22:00</dd>
+        <dt>Freitag</dt><dd>08:00 - 01:00</dd>
+        <dt>Samstag</dt><dd>09:30 - 02:00</dd>
+        <dt>Sonntag</dt><dd class="is-off">geschlossen</dd>
+      </dl>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══ Kontakt ═════════════════════════════════════════════════════ -->
-<section class="section section--deep" id="kontakt" aria-labelledby="kontakt-titel">
-  <div class="shell">
-    <div class="head rise">
-      <p class="kicker">Schreib oder ruf an</p>
-      <h2 class="h2" id="kontakt-titel">Kontakt</h2>
-      <svg class="divider" viewBox="0 0 230 12" fill="none" aria-hidden="true">
-        <path d="M0 6h100M130 6h100" stroke="currentColor" stroke-width="1"/>
-        <path d="M115 1.5 119.5 6 115 10.5 110.5 6Z" fill="currentColor"/>
-      </svg>
+  <!-- ===== Bilderstreifen ===== -->
+  <section class="chapter" id="impressionen" aria-labelledby="galerie-titel" style="padding-bottom:0">
+    <div class="shell strip__head rise">
+      <h2 class="display display--m" id="galerie-titel">Ein Blick rein</h2>
+      <div class="strip__nav">
+        <button type="button" data-strip="-1" aria-label="Bilder zurück"><span class="chev chev--l"></span></button>
+        <button type="button" data-strip="1" aria-label="Bilder weiter"><span class="chev chev--r"></span></button>
+      </div>
     </div>
+    <div class="strip" id="strip" tabindex="0" role="group" aria-label="Bilder aus dem Bertolds, horizontal scrollbar">
+      <figure>
+        <img src="assets/img/galerie-raum.webp" width="1200" height="1000" loading="lazy" decoding="async"
+             alt="Gastraum mit runden weißen Tischen, blauen Samtstühlen und der Bar im Hintergrund">
+        <figcaption>Der Gastraum am Nachmittag.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/galerie-lounge.webp" width="700" height="1160" loading="lazy" decoding="async"
+             alt="Petrolfarbene Samtbank an der Fensterfront, darüber ein Baum mit weißen Blüten">
+        <figcaption>Fensterplatz unter dem Blütenbaum.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/galerie-kaffee.webp" width="700" height="580" loading="lazy" decoding="async"
+             alt="Tasse Cappuccino von oben auf hellem Holztisch, daneben Kerze und Streuer">
+        <figcaption>Herz im Milchschaum.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/abends.webp" width="900" height="600" loading="lazy" decoding="async"
+             alt="Spritz mit Orangenscheibe, dahinter die blau beleuchtete Bar am Abend">
+        <figcaption>Spritz an der Bar.</figcaption>
+      </figure>
+    </div>
+  </section>
 
-    <div class="contact">
-      <a class="rise" href="tel:+4976138493619">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 2.9 9 3.6a1.4 1.4 0 0 1 1 1.3l.1 2.4a1.4 1.4 0 0 1-.7 1.3l-1.3.8a12 12 0 0 0 5.5 5.5l.8-1.3a1.4 1.4 0 0 1 1.3-.7l2.4.1a1.4 1.4 0 0 1 1.3 1l.7 2.4a1.4 1.4 0 0 1-1 1.7A16.4 16.4 0 0 1 4.9 4.2a1.4 1.4 0 0 1 1.7-1.3Z"/></svg>
-        <strong>Telefon</strong>
-        <span>+49 761 38493619</span>
-      </a>
-      <a class="rise" style="--i:1" href="mailto:info@bertolds.de">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
-        <strong>Mail</strong>
-        <span>info@bertolds.de</span>
-      </a>
-      <a class="rise" style="--i:2" href="https://www.instagram.com/bertolds_freiburg/" target="_blank" rel="noopener noreferrer">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
-        <strong>Instagram</strong>
-        <span>@bertolds_freiburg</span>
-      </a>
+  <!-- ===== Über uns ===== -->
+  <section class="about" id="ueber-uns" aria-labelledby="ueber-titel">
+    <div class="shell about__grid">
+      <figure class="frame frame--arch rise" style="--i:0">
+        <img src="assets/img/ueber-uns.webp" width="1000" height="1250" loading="lazy" decoding="async"
+             alt="Samtbank am Fenster, davor ein runder Tisch mit einem Drink und einem Stück Kuchen">
+      </figure>
+      <div class="rise" style="--i:1">
+        <h2 class="display display--l" id="ueber-titel">Wer hier hinter der Theke steht</h2>
+        <div class="chapter__body prose">
+          <p>Vasko Apostolov und Jonas Heitzler haben das Bertolds 2023 aufgemacht, keine zwei Minuten vom Bertoldsbrunnen.</p>
+          <p>Seitdem läuft der Tag hier vom Frühstück bis zum Espresso Martini.</p>
+        </div>
+        <p class="names">Vasko Apostolov und Jonas Heitzler<span>Inhaber</span></p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- ===== Anfahrt und Kontakt ===== -->
+  <section class="find" id="anfahrt" aria-labelledby="anfahrt-titel">
+    <div class="shell find__grid">
+      <address class="addr rise" style="--i:0">
+        <h2 class="display display--l" id="anfahrt-titel">Bertoldstraße 48<br>79098 Freiburg</h2>
+        <p class="prose">Die Straßenbahn hält am Bertoldsbrunnen, von dort sind es zwei Minuten zu Fuß.</p>
+      </address>
+      <ul class="links rise" id="kontakt" style="--i:1">
+        <li><a href="tel:+4976138493619"><span class="k">Telefon</span><span class="v">+49 761 38493619</span></a></li>
+        <li><a href="mailto:info@bertolds.de"><span class="k">Mail</span><span class="v">info@bertolds.de</span></a></li>
+        <li><a href="https://www.instagram.com/bertolds_freiburg/" target="_blank" rel="noopener noreferrer"><span class="k">Instagram</span><span class="v">@bertolds_freiburg</span></a></li>
+      </ul>
+    </div>
+  </section>
+
 </main>
 
-<!-- ══ Footer ══════════════════════════════════════════════════════ -->
-<footer class="footer">
+<footer class="foot">
   <div class="shell">
-    <div class="footer__grid">
-      <div>
-        <img class="footer__logo" src="assets/logo/logo_bertolds.png" width="760" height="668" loading="lazy" alt="Bertolds Cafébar">
-        <address>
-          Bertoldstraße 48<br>79098 Freiburg im Breisgau<br>
-          <a href="tel:+4976138493619">+49 761 38493619</a><br>
-          <a href="mailto:info@bertolds.de">info@bertolds.de</a>
-        </address>
-      </div>
-
-      <div>
-        <h2>Öffnungszeiten</h2>
-        <dl class="fhours">
-          <div><dt>Mo – Do</dt><dd>08:00 – 22:00</dd></div>
-          <div><dt>Freitag</dt><dd>08:00 – 01:00</dd></div>
-          <div><dt>Samstag</dt><dd>09:30 – 02:00</dd></div>
-          <div><dt>Sonntag</dt><dd>Geschlossen</dd></div>
-        </dl>
-      </div>
-
-      <div>
-        <h2>Mehr</h2>
-        <nav class="footer__links" aria-label="Fußzeile">
-          <a href="#karte">Tag &amp; Abend</a>
-          <a href="#oeffnungszeiten">Öffnungszeiten</a>
-          <a href="#anfahrt">Anfahrt</a>
-          <a href="https://www.instagram.com/bertolds_freiburg/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </nav>
-      </div>
+    <div class="foot__grid">
+      <img src="assets/logo/logo_bertolds.png" width="760" height="668" loading="lazy" alt="Logo der Bertolds Cafébar">
+      <p class="foot__meta">
+        Bertoldstraße 48, 79098 Freiburg im Breisgau<br>
+        <a href="tel:+4976138493619">+49 761 38493619</a><br>
+        <a href="mailto:info@bertolds.de">info@bertolds.de</a>
+      </p>
+      <p class="foot__meta">
+        Mo bis Do 08:00 - 22:00<br>
+        Freitag 08:00 - 01:00<br>
+        Samstag 09:30 - 02:00<br>
+        Sonntag geschlossen
+      </p>
     </div>
-
-    <div class="footer__bottom">
-      <p>© <span id="jahr">2026</span> Bertolds Cafébar</p>
+    <div class="foot__bottom">
+      <span>&copy; <span id="jahr">2026</span> Bertolds Cafébar</span>
       <button type="button" id="imp-open">Impressum</button>
-      <a class="kd-credit" href="https://kaiserstuhl-digital.de" target="_blank" rel="noopener noreferrer">
-        Demo von Kaiserstuhl Digital
-      </a>
+      <a class="footer__credit" href="https://kaiserstuhl-digital.de" target="_blank" rel="noopener noreferrer">Demo von Kaiserstuhl Digital</a>
     </div>
   </div>
 </footer>
 
-<a class="kd-badge" href="https://kaiserstuhl-digital.de" target="_blank" rel="noopener noreferrer">
-  <span class="kd-badge__dot" aria-hidden="true"></span>Demo von Kaiserstuhl Digital
-</a>
+<nav class="callbar" id="callbar" aria-label="Schnellkontakt">
+  <a href="tel:+4976138493619">Anrufen</a>
+  <a href="https://www.instagram.com/bertolds_freiburg/" target="_blank" rel="noopener noreferrer">Instagram</a>
+</nav>
 
-<!-- ══ Impressum ═══════════════════════════════════════════════════ -->
-<dialog id="imp" aria-labelledby="imp-titel">
-  <div class="imp">
-    <h2 id="imp-titel">Impressum</h2>
+<dialog class="imp" id="imp" aria-labelledby="imp-titel">
+  <div class="imp__in">
+    <h2 class="display display--m" id="imp-titel">Impressum</h2>
     <p>Angaben gemäß § 5 DDG.</p>
-
-    <h3>Betreiber</h3>
-    <p>Bertolds Cafébar<br>
-       <span class="todo">[TODO: vollständige Firmierung und Rechtsform]</span></p>
-
-    <h3>Anschrift</h3>
-    <p>Bertoldstraße 48<br>79098 Freiburg im Breisgau</p>
-
-    <h3>Kontakt</h3>
-    <p>Telefon: <a href="tel:+4976138493619">+49 761 38493619</a><br>
-       E-Mail: <a href="mailto:info@bertolds.de">info@bertolds.de</a></p>
-
-    <h3>Vertreten durch</h3>
-    <p><span class="todo">[TODO: Vertretungsberechtigte, Schreibweise laut Handelsregister]</span></p>
-
-    <h3>Registereintrag</h3>
-    <p><span class="todo">[TODO: Registergericht und Registernummer, falls eingetragen]</span></p>
-
-    <h3>Umsatzsteuer-ID</h3>
-    <p><span class="todo">[TODO: USt-IdNr. gemäß § 27 a UStG]</span></p>
-
-    <h3>Verantwortlich für den Inhalt</h3>
-    <p><span class="todo">[TODO: Name und Anschrift nach § 18 Abs. 2 MStV]</span></p>
-
-    <h3>Streitbeilegung</h3>
-    <p>Wir nehmen an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle nicht teil und sind dazu nicht verpflichtet.</p>
-
-    <h3>Hinweis</h3>
-    <p>Diese Seite ist eine unverbindliche Demo von Kaiserstuhl Digital und steht in keiner geschäftlichen Verbindung zum Betreiber.</p>
-
-    <button class="btn imp__close" type="button" id="imp-close">Schließen</button>
+    <dl>
+      <dt>Betreiber</dt>
+      <dd>Bertolds Cafébar<br>[TODO: vollständige Firmierung und Rechtsform]</dd>
+      <dt>Anschrift</dt>
+      <dd>Bertoldstraße 48<br>79098 Freiburg im Breisgau</dd>
+      <dt>Kontakt</dt>
+      <dd>Telefon: <a href="tel:+4976138493619">+49 761 38493619</a><br>
+          E-Mail: <a href="mailto:info@bertolds.de">info@bertolds.de</a></dd>
+      <dt>Vertreten durch</dt>
+      <dd>[TODO: Vertretungsberechtigte, Schreibweise laut Handelsregister]</dd>
+      <dt>Registereintrag</dt>
+      <dd>[TODO: Registergericht und Registernummer, falls eingetragen]</dd>
+      <dt>Umsatzsteuer-ID</dt>
+      <dd>[TODO: USt-IdNr. gemäß § 27 a UStG]</dd>
+      <dt>Verantwortlich für den Inhalt</dt>
+      <dd>[TODO: Name und Anschrift nach § 18 Abs. 2 MStV]</dd>
+      <dt>Streitbeilegung</dt>
+      <dd>Wir nehmen an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle nicht teil und sind dazu nicht verpflichtet.</dd>
+      <dt>Hinweis</dt>
+      <dd>Diese Seite ist eine unverbindliche Demo von Kaiserstuhl Digital und steht in keiner geschäftlichen Verbindung zum Betreiber.</dd>
+    </dl>
+    <button class="btn btn--ghost imp__close" type="button" id="imp-close">Schließen</button>
   </div>
 </dialog>
 
 <script>
 (function () {
   'use strict';
-
-  /* Header: erst umschalten, wenn der Hero durch ist. Sonst steht der helle
-     Balken mitten auf dem Foto. */
-  var header = document.getElementById('header');
-  var hero = document.querySelector('.hero');
-  var trigger = 80;
-  function measure() {
-    trigger = hero
-      ? Math.max(hero.offsetTop + hero.offsetHeight - header.offsetHeight, 0)
-      : 80;
-  }
-  var ticking = false;
-  function onScroll() {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(function () {
-      header.classList.toggle('is-stuck', window.scrollY >= trigger);
-      ticking = false;
-    });
-  }
-  addEventListener('scroll', onScroll, { passive: true });
-  addEventListener('resize', function () { measure(); onScroll(); }, { passive: true });
-  addEventListener('orientationchange', function () { measure(); onScroll(); });
-  measure();
-  onScroll();
-  addEventListener('load', function () { measure(); onScroll(); });
-
-  /* Fade-up on scroll */
   var reduce = matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* Reveals: IntersectionObserver, kein Scroll-Listener */
   var risers = document.querySelectorAll('.rise');
   if (reduce.matches || !('IntersectionObserver' in window)) {
     risers.forEach(function (el) { el.classList.add('is-in'); });
@@ -865,44 +718,78 @@ dialog::backdrop{background:rgba(20,20,20,.55);backdrop-filter:blur(3px)}
         e.target.classList.add('is-in');
         io.unobserve(e.target);
       });
-    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
     risers.forEach(function (el) { io.observe(el); });
   }
 
-  /* Jetzt geöffnet? — Minuten ab Mitternacht, Ende > 1440 heißt: bis nach Mitternacht.
-     0 = Sonntag. Sonntag hat kein eigenes Fenster, nur den Ausklang vom Samstag. */
-  var HOURS = { 1: [480, 1320], 2: [480, 1320], 3: [480, 1320], 4: [480, 1320],
-                5: [480, 1500], 6: [570, 1560] };
-
-  function isOpen(now) {
-    var day = now.getDay();
-    var min = now.getHours() * 60 + now.getMinutes();
-    var today = HOURS[day];
-    if (today && min >= today[0] && min < Math.min(today[1], 1440)) return true;
-    var yest = HOURS[(day + 6) % 7];
-    return !!(yest && yest[1] > 1440 && min < yest[1] - 1440);
+  /* Aktionsleiste erscheint, sobald der Hero durch ist */
+  var bar = document.getElementById('callbar');
+  var end = document.getElementById('hero-end');
+  if (bar && end && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      bar.classList.toggle('is-on', !entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(end);
+  } else if (bar) {
+    bar.classList.add('is-on');
   }
 
-  var pill = document.getElementById('status-pill');
-  var label = document.getElementById('status-text');
-  function paint() {
-    var open = isOpen(new Date());
-    pill.dataset.state = open ? 'open' : 'closed';
-    label.textContent = open ? 'Jetzt geöffnet' : 'Gerade geschlossen';
-    pill.hidden = false;
+  /* Bilderstreifen: Pfeile scrollen um eine Karte weiter */
+  var strip = document.getElementById('strip');
+  document.querySelectorAll('[data-strip]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (!strip) return;
+      var card = strip.querySelector('figure');
+      var step = card ? card.getBoundingClientRect().width + 28 : 320;
+      strip.scrollBy({ left: step * Number(b.dataset.strip), behavior: reduce.matches ? 'auto' : 'smooth' });
+    });
+  });
+
+  /* Status: geoeffnet oder geschlossen, gerechnet in Europe/Berlin */
+  var plan = {
+    1: [480, 1320], 2: [480, 1320], 3: [480, 1320], 4: [480, 1320],
+    5: [480, 1500], 6: [570, 1560], 0: null
+  };
+  function berlinNow() {
+    var p = new Intl.DateTimeFormat('de-DE', {
+      timeZone: 'Europe/Berlin', hour12: false,
+      weekday: 'short', hour: '2-digit', minute: '2-digit'
+    }).formatToParts(new Date());
+    var g = {};
+    p.forEach(function (x) { g[x.type] = x.value; });
+    var map = { 'So': 0, 'Mo': 1, 'Di': 2, 'Mi': 3, 'Do': 4, 'Fr': 5, 'Sa': 6 };
+    var d = map[(g.weekday || '').slice(0, 2)];
+    return { day: d, min: Number(g.hour) % 24 * 60 + Number(g.minute) };
   }
-  paint();
-  setInterval(paint, 60000);
+  var el = document.getElementById('status');
+  var txt = document.getElementById('status-text');
+  if (el && txt) {
+    try {
+      var now = berlinNow();
+      var open = false;
+      var today = plan[now.day];
+      if (today && now.min >= today[0] && now.min < today[1]) open = true;
+      var yest = plan[(now.day + 6) % 7];
+      if (yest && yest[1] > 1440 && now.min < yest[1] - 1440) open = true;
+      el.hidden = false;
+      el.dataset.state = open ? 'open' : 'closed';
+      txt.textContent = open ? 'Gerade geöffnet' : 'Gerade geschlossen';
+    } catch (err) { el.hidden = true; }
+  }
 
   /* Impressum */
   var dlg = document.getElementById('imp');
-  document.getElementById('imp-open').addEventListener('click', function () {
-    if (typeof dlg.showModal === 'function') { dlg.showModal(); } else { dlg.setAttribute('open', ''); }
-  });
-  document.getElementById('imp-close').addEventListener('click', function () { dlg.close(); });
-  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  var openBtn = document.getElementById('imp-open');
+  var closeBtn = document.getElementById('imp-close');
+  if (dlg && openBtn && typeof dlg.showModal === 'function') {
+    openBtn.addEventListener('click', function () { dlg.showModal(); });
+    closeBtn.addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  } else if (openBtn) {
+    openBtn.hidden = true;
+  }
 
-  document.getElementById('jahr').textContent = new Date().getFullYear();
+  var jahr = document.getElementById('jahr');
+  if (jahr) jahr.textContent = new Date().getFullYear();
 })();
 </script>
 </body>
